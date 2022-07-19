@@ -1,0 +1,11 @@
+<div>
+  <h1>Valor do contador</h1>
+  <h2>{{ counter$ | async }}</h2>
+  <button
+    (click)="clearCounter()"
+    [disabled]="(counter$ | async) === 0"
+    [class.inative]="(counter$ | async) === 0"
+  >
+    ZERAR CONTADOR
+  </button>
+</div>
